@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Аудио — карточки для Авито</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #eef1f6;
+    color: #1e2430;
+    line-height: 1.55;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .page-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2c3545;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .page-sub {
+    font-size: 14px;
+    color: #7a8599;
+    margin-bottom: 36px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(30, 36, 48, 0.06), 0 4px 16px rgba(30, 36, 48, 0.04);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 2px 6px rgba(30, 36, 48, 0.08), 0 8px 28px rgba(30, 36, 48, 0.07);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1e2430;
+    letter-spacing: -0.2px;
+  }
+
+  .card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5a75;
+    background: #f0f4fa;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-desc {
+    font-size: 14.5px;
+    color: #4a5568;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+
+  .specs-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8896ab;
+    margin-bottom: 10px;
+  }
+
+  .specs {
+    list-style: none;
+    font-size: 14px;
+    color: #3d4a5c;
+  }
+
+  .specs li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .specs li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b8c5d9;
+  }
+
+  .specs .sub {
+    padding-left: 36px;
+    font-size: 13.5px;
+    color: #5a6a80;
+  }
+
+  .specs .sub::before {
+    left: 18px;
+    width: 5px;
+    height: 5px;
+    background: #cdd7e5;
+  }
+
+  .card-price {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #edf0f5;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3545;
+  }
+
+  .card-price span {
+    font-weight: 400;
+    color: #7a8599;
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 20px 12px;
+    }
+    .card {
+      padding: 22px 20px;
+      border-radius: 14px;
+    }
+    .card-header {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-title {
+      font-size: 17px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1 class="page-title">Аудиокомпоненты — карточки для Авито</h1>
+  <p class="page-sub">Готовые описания с характеристиками и ценами</p>
+
+  <!-- Parasound Z-select -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Z-select</div>
+      <div class="card-badge">~$200 · Авито: 4 500–8 000 ₽</div>
+    </div>
+    <p class="card-desc">Компактный спикерселектор (коммутатор акустических систем) из полурэковой серии Parasound Z Custom, предназначенный для распределения аудиосигнала от одного усилителя мощности на несколько пар колонок.</p>
+    <div class="specs-title">Основные характеристики</div>
+    <ul class="specs">
+      <li>Назначение: распределение стереосигнала на до 5 пар акустических систем (АС)</li>
+      <li>Максимальная мощность на канал: до 250 Вт</li>
+      <li>Защитные резисторы: внутренние 60-ваттные безиндуктивные резисторы</li>
+      <li>Согласование сопротивления: отключаемая схема защиты усилителя от падения импеданса (активируется при одновременном включении нескольких пар колонок)</li>
+      <li>Максимальная токовая нагрузка: 10 ампер</li>
+      <li>Коммутация: съёмные разъёмы типа Phoenix</li>
+      <li>Габариты (Ш × В × Г): 241 × 50 (45 мм без ножек) × 254 мм</li>
+      <li>Вес: 1,35 кг</li>
+      <li>Цвет корпуса: чёрный</li>
+      <li>Монтаж: половинная ширина рэковой стойки (1U), опционально доступны крепёжные элементы SBS и Zblank для установки в 19″ стойку</li>
+    </ul>
+    <div class="card-price">Цена: ~$200 <span>(Авито: 4 500–8 000 ₽)</span></div>
+  </div>
+
+  <!-- Parasound Ztuner v.2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Ztuner v.2</div>
+      <div class="card-badge">~$60–$125 · Авито: 6 000–12 000 ₽</div>
+    </div>
+    <p class="card-desc">Высококачественный компактный AM/FM-тюнер полурэкового формата, разработанный специально для мультизонных инсталляций (Custom Install) и систем домашнего аудио.</p>
+    <div class="specs-title">Основные характеристики</div>
+    <ul class="specs">
+      <li>Диапазоны частот: FM 87.5–108 МГц, AM 520–1610 кГц</li>
+      <li>Чувствительность FM: моно (IHF) 10.8 dBf (11 dBf); стерео (IHF) 36.9 dBf (для 50 дБ затухания шумов)</li>
+      <li>Соотношение сигнал/шум: >74 дБ (стерео)</li>
+      <li>Разделение каналов: 50 дБ</li>
+      <li>Селективность по соседнему каналу: 80 дБ</li>
+      <li>Частотный диапазон: FM 30 Гц – 15 кГц (±1 дБ); AM 20 Гц – 4.5 кГц (±2 дБ)</li>
+    </ul>
+    <div class="specs-title">Функционал и интерфейсы</div>
+    <ul class="specs">
+      <li>Память: 30 пресетов радиостанций (с возможностью ограничить до 8)</li>
+      <li>Интеграция «Умный дом»: полноценный двунаправленный RS-232</li>
+      <li>Мультизонность: пульт ДУ настраивается для управления 4 независимыми зонами</li>
+      <li>Принудительное моно: функция Forced Mono для уверенного приёма слабых станций</li>
+      <li>Коммутация: позолоченные RCA (стерео и моно-выходы), вход/выход ИК-приёмника, вход и петлевой выход триггера 12 В</li>
+    </ul>
+    <div class="specs-title">Физические параметры</div>
+    <ul class="specs">
+      <li>Форм-фактор: Ultra-compact (половина ширины рэковой стойки, высота 1U)</li>
+      <li>Габариты: 241 × 50 × 254 мм (44 мм без ножек)</li>
+      <li>Вес: ~1,83 кг</li>
+      <li>Питание: переключаемый вольтаж 115/230 В, съёмный кабель питания, потребляемая мощность ~20 Вт</li>
+    </ul>
+    <div class="card-price">Цена: ~$60–$125 <span>(Авито: 6 000–12 000 ₽)</span></div>
+  </div>
+
+  <!-- Parasound Zpre2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Zpre2</div>
+      <div class="card-badge">~$149–$225 · Авито: ~32 900 ₽</div>
+    </div>
+    <p class="card-desc">Parasound Zpre2 (Zpre v2) — компактный стереофонический предусилитель аудио/видео сигнала формата 1U половинной ширины, собранный на аудиофильских комплектующих.</p>
+    <div class="specs-title">Основные характеристики</div>
+    <ul class="specs">
+      <li>Тип: двухканальный полупроводниковый предусилитель (стерео)</li>
+      <li>Воспроизводимый диапазон: 10 Гц – 100 кГц (+0/–3 дБ); 10 Гц – 50 кГц (+0/–0.8 дБ)</li>
+      <li>Отношение сигнал/шум: 112 дБ (IHF A-weighted); 92 дБ (невзвешенное)</li>
+      <li>THD: 0,006%</li>
+      <li>Входной импеданс: 15 кОм</li>
+      <li>Чувствительность входа: 150 мВ для 1 В на выходе</li>
+      <li>Максимальный выходной сигнал: 7,6 В</li>
+      <li>Переходное затухание: 83 дБ (1 кГц); 76 дБ (20 кГц)</li>
+      <li>Регулировки тембра: Bass ±8 дБ на 100 Гц; Treble ±10 дБ на 10 кГц; регулировка баланса</li>
+    </ul>
+    <div class="specs-title">Коммутация</div>
+    <ul class="specs">
+      <li>Входы: 4 линейных RCA с композитным видео; Input 1 с приоритетным авто-включением (Auto Select)</li>
+      <li>Выходы: Pre-Amp Out, фиксированный Rec Out / Tape, выход на наушники на передней панели (с автоотключением основного выхода)</li>
+      <li>Управление: двунаправленный RS-232, вход внешнего ИК-датчика, триггерный вход/сквозной выход 12 В с ручным или автоматическим включением</li>
+      <li>Пульт ДУ: ИК, раздельные дискретные команды вкл/выкл, поддержка до 4 независимых зон</li>
+    </ul>
+    <div class="specs-title">Питание и физические параметры</div>
+    <ul class="specs">
+      <li>Блок питания: внутренний, моторизованный аналоговый регулятор громкости</li>
+      <li>Потребляемая мощность: 20 Вт (рабочий), 2 Вт (standby)</li>
+      <li>Питание: 110–120 / 220–240 В, 50–60 Гц, съёмный кабель IEC</li>
+      <li>Монтажный размер: 1U, половинная ширина</li>
+      <li>Габариты (Ш × Г × В): 241 × 254 × 50 мм</li>
+      <li>Вес: ~2,1 кг</li>
+      <li>Цвета: чёрный, серебристый</li>
+    </ul>
+    <div class="card-price">Цена: ~$149–$225 <span>(Авито: ~32 900 ₽)</span></div>
+  </div>
+
+  <!-- Parasound Zamp v3 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Zamp v3</div>
+      <div class="card-badge">~$275–$385 · Авито: 30 000–50 000 ₽</div>
+    </div>
+    <p class="card-desc">Parasound Zamp v3 (серия Z Custom) — компактный 2-канальный усилитель мощности класса AB, разработанный для мультирум-систем, настольных аудиосистем и домашних кинотеатров.</p>
+    <div class="specs-title">Основные параметры</div>
+    <ul class="specs">
+      <li>Тип: 2-канальный усилитель мощности (стерео / моно мостовой режим)</li>
+      <li>Выходная мощность (стерео): 2 × 45 Вт (8 Ом, 20 Гц – 20 кГц); 2 × 60 Вт (4 Ом)</li>
+      <li>Выходная мощность (мостовой режим): 1 × 90 Вт (8 Ом)</li>
+      <li>Частотный диапазон: 5 Гц – 100 кГц (–3 дБ); рабочий 20 Гц – 20 кГц</li>
+      <li>Соотношение сигнал/шум: 116 дБ (полная мощность)</li>
+      <li>THD: 0,02% – 0,07%</li>
+      <li>Входная чувствительность / усиление: 600 мВ; регулируемые уровни усиления для левого и правого каналов</li>
+    </ul>
+    <div class="specs-title">Конструкция и разъёмы</div>
+    <ul class="specs">
+      <li>Элементная база: полностью дискретные схемы с тороидальным трансформатором</li>
+      <li>Входы: позолоченные RCA (аналоговые)</li>
+      <li>Петлевые выходы (Loop): линейные RCA для сквозного подключения (daisy-chain)</li>
+      <li>Выходы на акустику: винтовые клеммы (2 пары)</li>
+      <li>Управление и триггеры: вход 12V Trigger (разъём 3,5 мм); автовключение по аудиосигналу (Audio-Sensing); переключатель Ground Lift</li>
+      <li>Дополнительно: выход для наушников на передней панели; селектор напряжения сети 115/230 В</li>
+    </ul>
+    <div class="specs-title">Габариты и питание</div>
+    <ul class="specs">
+      <li>Размеры (Ш × В × Г): 220 × 51 × 254 мм (половина ширины стандартной стойки / 1/2-rack)</li>
+      <li>Вес: ~3 кг (6,65 фунта)</li>
+      <li>Монтаж: возможность установки в рэковую стойку (2U с помощью опциональных креплений)</li>
+    </ul>
+    <div class="card-price">Цена: ~$275–$385 <span>(Авито: 30 000–50 000 ₽; новый ~75 000–79 990 ₽)</span></div>
+  </div>
+
+  <!-- Parasound Zdac / Zdac V2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Zdac / Zdac V2</div>
+      <div class="card-badge">~$220–$300 · Авито: 39 500 ₽</div>
+    </div>
+    <p class="card-desc">Parasound Zdac (и обновлённая версия Zdac v.2) — компактный настольный цифро-аналоговый преобразователь и усилитель для наушников.</p>
+    <div class="specs-title">Основные технические характеристики</div>
+    <ul class="specs">
+      <li>ЦАП-чип: Analog Devices AD1853 (24 бит / 192 кГц)</li>
+      <li>Апсэмплинг и реклокинг: AD1895, принудительное повышение до 24 бит / 422 кГц для всех входов с подавлением джиттера</li>
+      <li>Частотный диапазон: 20 Гц – 20 кГц (±0.2 дБ)</li>
+      <li>Отношение сигнал/шум: 110 дБ (A-weighted)</li>
+      <li>Поддерживаемые частоты дискретизации:
+        <ul class="specs">
+          <li class="sub">Optical и Coaxial: от 8 кГц до 192 кГц (24 бит)</li>
+          <li class="sub">USB (асинхронный): до 96 кГц / 24 бит, без драйверов для Windows и Mac</li>
+          <li class="sub">Подключение Apple-устройств (Lightning через USB-адаптер) — в версии v.2</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="specs-title">Подключения и интерфейсы</div>
+    <ul class="specs">
+      <li>Цифровые входы: 1 × оптический (Toslink), 1 × коаксиальный (RCA), 1 × USB 2.0 Type-B</li>
+      <li>Аналоговые выходы: небалансные RCA (фиксированный/регулируемый, 2.1 В RMS); балансные XLR (фиксированный/регулируемый, 4.2 В RMS)</li>
+      <li>Выход на наушники: встроенный усилитель с высоким током и низким выходным сопротивлением (10 Ω); разъёмы 1/4″ (6.3 мм) и 1/8″ (3.5 мм) позолоченные; поддерживаемое сопротивление наушников 32–600 Ω; отдельный регулятор громкости (в v.2 — тумблер блокировки громкости и триггеры 12 В)</li>
+    </ul>
+    <div class="specs-title">Конструкция и питание</div>
+    <ul class="specs">
+      <li>Блок питания: внутренний линейный с тороидальным трансформатором (не импульсный адаптер)</li>
+      <li>Функция предусилителя: режим регулируемого выхода (Variable volume) для прямого подключения к усилителю мощности</li>
+      <li>Форм-фактор: компактный корпус 1/2 рэка; расцветки чёрный и серебристый; опция рэкового крепления</li>
+      <li>Габариты: 51 × 220 × 254 мм; вес ~2.3 кг</li>
+    </ul>
+    <div class="card-price">Цена: ~$220–$300 <span>(Авито: Zdac V2 — 39 500 ₽)</span></div>
+  </div>
+
+  <!-- Parasound Zcd -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Parasound Zcd</div>
+      <div class="card-badge">~20 000 ₽ · Европа: ~€190</div>
+    </div>
+    <p class="card-desc">Parasound Zcd (серия Z) — ультракомпактный CD/MP3-проигрыватель половинной ширины рэковой стойки.</p>
+    <div class="specs-title">Основные параметры и аудиосистема</div>
+    <ul class="specs">
+      <li>Тип привода: щелевой (slot-loading)</li>
+      <li>Поддерживаемые носители: CD, CD-R, CD-RW, а также MP3 с внешних USB-накопителей</li>
+      <li>ЦАП: Cirrus Logic CS4353 (24 бит / 192 кГц)</li>
+      <li>Цифровой приёмник: Cirrus Logic CS8416</li>
+      <li>Диапазон частот: 20 Гц – 20 кГц (+0/–1 дБ)</li>
+      <li>THD: &lt;0,02%</li>
+      <li>Соотношение сигнал/шум: &gt;98 дБ</li>
+      <li>Питание: 110–130 / 220–240 В (50–60 Гц)</li>
+    </ul>
+    <div class="specs-title">Подключения и разъёмы</div>
+    <ul class="specs">
+      <li>Аналоговые выходы: фиксированный и регулируемый (управление громкостью с передней панели)</li>
+      <li>Цифровые выходы: коаксиальный и оптический</li>
+      <li>Дополнительно: порт USB Type-A (для флешек с MP3), линейный вход 3.5 мм, композитный видеовыход, ИК-вход (IR input), порт RS-232 (однонаправленный), триггерный вход/выход 12 В</li>
+    </ul>
+    <div class="specs-title">Конструкция и габариты</div>
+    <ul class="specs">
+      <li>Форм-фактор: половинная ширина рэковой стойки (half-rack width, высота 1U)</li>
+      <li>Размеры (Ш × Г × В): ~241 × 254 × 51 мм (9,5″ × 10″ × 2″)</li>
+      <li>Вес: ~2,27 кг (5 фунтов)</li>
+      <li>Монтаж: установка в стойку с фирменными аксессуарами (SBS, Zblank, Zrack)</li>
+    </ul>
+    <div class="card-price">Цена: ~20 000 ₽ <span>(Авито/Festima; в Европе ~€190)</span></div>
+  </div>
+
+  <!-- Hitachi HMA-G2 + HGE-G2 + HTD-G2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Hitachi HMA-G2 + HGE-G2 + HTD-G2</div>
+      <div class="card-badge">Авито: 99 000 ₽</div>
+    </div>
+    <p class="card-desc">Компоненты классической винтажной миди-системы Hitachi System G2 (Япония, 1982–1984).</p>
+    <div class="specs-title">1. Hitachi HMA-G2 — стереоусилитель мощности</div>
+    <ul class="specs">
+      <li>Год выпуска: 1982</li>
+      <li>Выходная мощность: 60 Вт на канал (8 Ом, стерео)</li>
+      <li>Частотная характеристика: 10 Гц – 100 кГц</li>
+      <li>THD: 0,02%</li>
+      <li>Соотношение сигнал/шум: 119 дБ</li>
+      <li>Особенности: крупные аналоговые стрелочные VU-метры, переключатель акустических систем (A, B, A+B)</li>
+      <li>Габариты (Ш × В × Г): 320 × 137 × 271 мм</li>
+      <li>Вес: 5,8 кг</li>
+    </ul>
+    <div class="specs-title">2. Hitachi HTD-G2 — тюнер + кассетная дека + предусилитель</div>
+    <ul class="specs">
+      <li>Год выпуска: 1982–1984</li>
+      <li>Тип: комбинированный блок (AM/FM-тюнер + кассетная дека + встроенный предусилитель)</li>
+      <li>Кассетная секция: однокассетная, 4 дорожки, 2 канала, скорость 4,75 см/с</li>
+      <li>Типы лент: Type I (Normal), CrO2 (High), Metal</li>
+      <li>Шумоподавление: Dolby B, Dolby C</li>
+      <li>Частотная характеристика кассеты: 20 Гц – 17 000 Гц (металлическая лента)</li>
+      <li>Детонация: 0,04%</li>
+      <li>Радиодиапазоны: FM 87,5–108 МГц, AM 522–1611 кГц</li>
+      <li>Входы/разъёмы: Phono (MM), DAD/AUX, микрофонный, линейные входы/выходы</li>
+      <li>Габариты (Ш × В × Г): 320 × 137 × 276 мм</li>
+      <li>Вес: 5,2 кг</li>
+    </ul>
+    <div class="specs-title">3. Hitachi HGE-G2 — графический эквалайзер</div>
+    <ul class="specs">
+      <li>Год выпуска: 1982–1984</li>
+      <li>Тип: 10-полосный стереофонический эквалайзер со сдвижными ползунковыми регуляторами</li>
+      <li>Диапазон регулировки: 31,5 Гц – 20 кГц</li>
+      <li>Габариты (Ш × В × Г): 320 × 137 × 262 мм</li>
+      <li>Вес: 3 кг</li>
+    </ul>
+    <div class="specs-title">Общая информация о системе</div>
+    <ul class="specs">
+      <li>Оригинальный комплект System G2 стоил в 1982 году около 1998 DM</li>
+      <li>В серию также входили: полуавтоматический проигрыватель Hitachi HT-G2 (или HT-21), трёхполосная акустика Hitachi HS-G2, один из первых бытовых CD-плееров Hitachi DA-1000 (1983)</li>
+    </ul>
+    <div class="card-price">Цена: 99 000 ₽ <span>(Авито, комплект)</span></div>
+  </div>
+
+  <!-- Sony CFS-88S -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Sony CFS-88S</div>
+      <div class="card-badge">Авито: 31 000 ₽</div>
+    </div>
+    <p class="card-desc">Sony CFS-88S (также известная как Sony Transound) — крупная раскладная стереомагнитола («бумбокс») премиального класса, выпущенная компанией Sony в 1981 году.</p>
+    <div class="specs-title">Основные характеристики</div>
+    <ul class="specs">
+      <li>Год выпуска: 1981</li>
+      <li>Тип: переносная 3-частная стереомагнитола с отстёгивающимися на шарнирах колонками (складывается в виде «чемоданчика»)</li>
+      <li>Габариты (в разложенном виде): ширина до ~92 см, высота 254 мм, глубина 127–240 мм (в зависимости от положения колонок)</li>
+      <li>Вес: ~9,4–9,6 кг (без батареек)</li>
+    </ul>
+    <div class="specs-title">Усилитель и звук</div>
+    <ul class="specs">
+      <li>Выходная мощность: 2 × 6 Вт (при 10% THD)</li>
+      <li>Динамики (2-полосные): НЧ 200 мм (20 см), ВЧ 50 мм (5 см)</li>
+      <li>Индикация: стрелочные VU-индикаторы уровня сигнала (синие стрелки)</li>
+    </ul>
+    <div class="specs-title">Радиоприёмник (4 диапазона)</div>
+    <ul class="specs">
+      <li>Диапазоны: FM, MW (средние волны), SW1, SW2 (короткие волны)</li>
+      <li>FM-диапазон: зависит от рынка поставки (обычно 76–108 или 88–108 МГц со стереоприёмом)</li>
+    </ul>
+    <div class="specs-title">Кассетная дека</div>
+    <ul class="specs">
+      <li>Тип: стереофоническая кассетная дека</li>
+      <li>Поддержка типов лент: включая Metal; воспроизведение ориентировочно 60–13 000 Гц</li>
+    </ul>
+    <div class="specs-title">Питание</div>
+    <ul class="specs">
+      <li>Электросеть: переключаемое AC 110/120/220/240 В</li>
+      <li>Автономное: батарейки D/R20 (10 шт. × 1,5 В) или внешнее DC 12 В</li>
+    </ul>
+    <div class="card-price">Цена: 31 000 ₽ <span>(Авито)</span></div>
+  </div>
+
+  <!-- Acoustic Energy Aelite Two -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Acoustic Energy Aelite Two</div>
+      <div class="card-badge">Авито: 28 000–45 000 ₽</div>
+    </div>
+    <p class="card-desc">Acoustic Energy Aelite Two — полочная акустическая система с высоким уровнем чувствительности и металлическими диффузорами НЧ/СЧ-динамиков.</p>
+    <div class="specs-title">Основные характеристики</div>
+    <ul class="specs">
+      <li>Тип: полочная акустическая система</li>
+      <li>Частотный диапазон: 36 Гц – 25 кГц</li>
+      <li>Чувствительность: 89–91 дБ (в зависимости от методики измерения)</li>
+      <li>Импеданс: 6 Ом</li>
+      <li>Максимальная мощность усилителя: 175 Вт</li>
+      <li>Излучатели:
+        <ul class="specs">
+          <li class="sub">НЧ/СЧ: 2 × 110 мм (диффузоры из лёгкого анодированного сплава, поршневой ход 32 мм)</li>
+          <li class="sub">ВЧ: 25 мм неодимовый твитер с шёлковым куполом (магнитное экранирование)</li>
+        </ul>
+      </li>
+      <li>Коммутация: подключение по схеме Bi-wiring</li>
+      <li>Габариты (Ш × В × Г): 230 × 450 × 297 мм</li>
+      <li>Вес: 9,5 кг (одна колонка)</li>
+      <li>Варианты отделки: натуральная берёза, чёрный ясень, красная вишня</li>
+    </ul>
+    <div class="card-price">Цена: 28 000–45 000 ₽ <span>(Авито, б/у)</span></div>
+  </div>
+
+</div>
+</body>
+</html>
